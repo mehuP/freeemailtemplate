@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 100%;
+}
+
+.logo-section .logo {
+    height: 40px;
+    border-radius: 4px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 15px;
+    cursor: pointer;
+    color: #666;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-item.active {
+    color: #2e7d32;
+    background-color: #e8f5e8;
+}
+
+.nav-item i {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.nav-item:hover {
+    background-color: #f0f0f0;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bank-logo {
+    height: 30px;
+    border-radius: 4px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.profile-text {
+    color: #333;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 80px;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Search Section */
+.search-section {
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #4caf50;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: pointer;
+}
+
+.advance-filter-btn {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.advance-filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Status Filter */
+.status-filter {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.status-options {
+    display: flex;
+    gap: 25px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.status-item.active {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.status-item:hover {
+    background-color: #f0f0f0;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-indicator.live {
+    background-color: #4caf50;
+}
+
+.status-indicator.future {
+    background-color: #ff9800;
+}
+
+.status-indicator.archive {
+    background-color: #2196f3;
+}
+
+.status-indicator.cancelled {
+    background-color: #f44336;
+}
+
+.view-toggle {
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.view-toggle:hover {
+    color: #333;
+}
+
+/* Table Styles */
+.table-container {
+    background-color: white;
+    margin: 0 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.auction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.auction-table th {
+    background-color: #f8f9fa;
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 12px;
+}
+
+.auction-table th i {
+    margin-left: 5px;
+    color: #666;
+    font-size: 10px;
+}
+
+.auction-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+}
+
+.auction-table tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.auction-table tr:hover {
+    background-color: #f0f8f0;
+}
+
+.auction-table .status-cell {
+    text-align: center;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.live {
+    background-color: #4caf50;
+}
+
+.status-dot.future {
+    background-color: #ff9800;
+}
+
+.status-dot.archive {
+    background-color: #2196f3;
+}
+
+.status-dot.cancelled {
+    background-color: #f44336;
+}
+
+.auction-table .document-icon,
+.auction-table .view-icon {
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+.auction-table .document-icon:hover,
+.auction-table .view-icon:hover {
+    color: #333;
+}
+
+/* Notification Panel */
+.notification-panel {
+    background-color: white;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.notification-header {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.notification-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.view-all {
+    color: #2196f3;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.close-notification {
+    color: #666;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.close-notification:hover {
+    color: #333;
+}
+
+.notification-content {
+    padding: 15px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #333;
+}
+
+.warning-icon {
+    color: #ff9800;
+    font-size: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+/* Footer Info */
+.footer-info {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 15px;
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    border-radius: 4px 0 0 0;
+}
+
+.language {
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-nav {
+        gap: 20px;
+    }
+    
+    .nav-item {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    
+    .nav-item i {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+        gap: 15px;
+    }
+    
+    .right-section {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .status-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .table-container {
+        margin: 0 10px;
+        overflow-x: auto;
+    }
+    
+    .auction-table {
+        min-width: 800px;
+    }
+    
+    .notification-panel {
+        margin: 10px;
+    }
+}
+
+/* Table alternating row styles */
+.auction-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.auction-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Status indicator styles in table */
+.auction-table .status-cell {
+    text-align: center;
+    width: 60px;
+}
+
+.auction-table .document-cell,
+.auction-table .view-cell {
+    text-align: center;
+    width: 50px;
+}
+
+.auction-table .document-cell i,
+.auction-table .view-cell i {
+    color: #666;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.auction-table .document-cell i:hover,
+.auction-table .view-cell i:hover {
+    color: #333;
+}
