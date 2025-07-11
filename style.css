@@ -1,0 +1,459 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    padding-bottom: 120px; /* Space for fixed notification */
+}
+
+/* Header Styles */
+.navbar {
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-circle {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff4444, #cc3333);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.logo-text {
+    display: block;
+}
+
+/* Navigation Styles */
+.navbar-nav .nav-link {
+    color: #666 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #333 !important;
+    border-bottom: 2px solid #007bff;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 14px;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    background-color: #e8f5e8;
+    padding: 8px 15px;
+    border-radius: 20px;
+    min-width: 120px;
+}
+
+.profile-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    margin-right: 8px;
+}
+
+.progress-bar {
+    width: 40px;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Bank Logo */
+.bank-logo-img {
+    height: 30px;
+    width: auto;
+}
+
+/* Search Section */
+.search-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    padding: 12px 50px 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #0056b3;
+}
+
+.advance-filter-btn {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #666;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.filter-options {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.filter-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.filter-dot.live {
+    background-color: #28a745;
+}
+
+.filter-dot.future {
+    background-color: #ffc107;
+}
+
+.filter-dot.archive {
+    background-color: #17a2b8;
+}
+
+.filter-dot.cancelled {
+    background-color: #dc3545;
+}
+
+/* Table Styles */
+.auction-table {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 0;
+}
+
+.auction-table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    font-size: 13px;
+    color: #555;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.auction-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.auction-table tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.auction-table tbody tr:hover {
+    background-color: #e8f4fd;
+}
+
+.auction-table tbody td {
+    padding: 12px;
+    font-size: 13px;
+    color: #333;
+    vertical-align: middle;
+}
+
+.auction-table th i,
+.auction-table td i {
+    color: #999;
+    cursor: pointer;
+}
+
+.auction-table th i:hover,
+.auction-table td i:hover {
+    color: #666;
+}
+
+/* Status Dots */
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.live {
+    background-color: #28a745;
+}
+
+.status-dot.future {
+    background-color: #ffc107;
+}
+
+.status-dot.archive {
+    background-color: #17a2b8;
+}
+
+.status-dot.cancelled {
+    background-color: #dc3545;
+}
+
+/* Notification Section */
+.notification-section {
+    background-color: #fff3cd;
+    border-top: 1px solid #ffeaa7;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.notification-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.kyc-text {
+    font-weight: 600;
+    color: #856404;
+    margin-right: 8px;
+}
+
+.upload-text {
+    color: #856404;
+}
+
+.notification-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    color: #666;
+}
+
+.page-info,
+.date-info,
+.lang-selector {
+    font-weight: 500;
+}
+
+.btn-close-notifications {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.btn-close-notifications:hover {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 8px 15px;
+    }
+    
+    .search-section .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .filter-options {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .table-responsive {
+        font-size: 11px;
+    }
+    
+    .notification-content {
+        max-height: 100px;
+        overflow-y: auto;
+    }
+    
+    .notification-controls {
+        gap: 8px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 8px;
+    }
+    
+    .profile-container {
+        padding: 6px 10px;
+        min-width: 100px;
+    }
+    
+    .auction-table th,
+    .auction-table td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+    
+    .search-input {
+        padding: 10px 40px 10px 12px;
+        font-size: 12px;
+    }
+    
+    .search-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Additional Utility Classes */
+.text-muted {
+    color: #6c757d !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+/* Animation for table rows */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auction-table tbody tr {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Scrollbar styling for better UX */
+.table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Custom focus styles for accessibility */
+.search-input:focus,
+.advance-filter-btn:focus,
+.btn-close-notifications:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .notification-section {
+        display: none;
+    }
+    
+    .search-section {
+        display: none;
+    }
+    
+    .auction-table {
+        box-shadow: none;
+    }
+}
