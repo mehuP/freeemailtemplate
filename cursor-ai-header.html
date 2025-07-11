@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor AI - Header Layout</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --cursor-primary: #000000;
+            --cursor-text: #333333;
+            --cursor-text-light: #666666;
+            --cursor-border: #e5e7eb;
+            --cursor-bg: #ffffff;
+            --cursor-accent: #0066ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--cursor-bg);
+            color: var(--cursor-text);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: var(--cursor-bg);
+            border-bottom: 1px solid var(--cursor-border);
+            padding: 0.75rem 0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cursor-primary) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cursor-logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--cursor-text) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem !important;
+            margin: 0 0.25rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--cursor-primary) !important;
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .navbar-nav .nav-link.active {
+            color: var(--cursor-primary) !important;
+            font-weight: 600;
+        }
+
+        .btn-outline-dark {
+            border: 1px solid var(--cursor-border);
+            color: var(--cursor-text);
+            background-color: transparent;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin-right: 0.75rem;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: var(--cursor-primary);
+            color: white;
+            border-color: var(--cursor-primary);
+        }
+
+        .btn-primary {
+            background-color: var(--cursor-primary);
+            border-color: var(--cursor-primary);
+            color: white;
+            padding: 0.5rem 1.25rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #1a1a1a;
+            border-color: #1a1a1a;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.25rem 0.5rem;
+            font-size: 1.1rem;
+            background: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid var(--cursor-border);
+            }
+
+            .navbar-nav {
+                margin-bottom: 1rem;
+            }
+
+            .navbar-nav .nav-link {
+                padding: 0.75rem 0 !important;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .auth-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+                align-items: stretch;
+            }
+
+            .btn-outline-dark,
+            .btn-primary {
+                margin: 0;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        /* Demo content styles */
+        .demo-content {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .demo-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--cursor-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .demo-content p {
+            font-size: 1.25rem;
+            color: var(--cursor-text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .demo-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .demo-content p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid px-3 px-lg-4">
+            <!-- Logo/Brand -->
+            <a class="navbar-brand" href="#">
+                <div class="cursor-logo">C</div>
+                Cursor
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Content -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Center Navigation Links -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#enterprise">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#forum">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#careers">Careers</a>
+                    </li>
+                </ul>
+
+                <!-- Right Side Auth Buttons -->
+                <div class="auth-buttons">
+                    <a href="#signin" class="btn btn-outline-dark">Sign in</a>
+                    <a href="#download" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Content (for visualization) -->
+    <section class="demo-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h1>The AI Code Editor</h1>
+                    <p>Built to make you extraordinarily productive, Cursor is the best way to code with AI.</p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="#download" class="btn btn-primary btn-lg">Download for macOS</a>
+                        <a href="#downloads" class="btn btn-outline-dark btn-lg">All Downloads</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
